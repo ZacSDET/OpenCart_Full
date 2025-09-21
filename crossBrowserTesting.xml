@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All Test Suite" parallel="tests">
+    <listeners>
+        <listener class-name="utilities.ExtentReportManager"></listener>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="chromeTest">
+
+        <parameter name="os" value="mac"></parameter>
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="testCase.TC001_AccountRegistrationTest">
+                <methods>
+                    <include name="verify_Account_Registration"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="edgeTest">
+
+        <parameter name="os" value="mac"></parameter>
+        <parameter name="browser" value="edge"></parameter>
+        <classes>
+            <class name="testCase.TC001_AccountRegistrationTest">
+                <methods>
+                    <include name="verify_Account_Registration"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="fireFoxTest">
+
+        <parameter name="os" value="mac"></parameter>
+        <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="testCase.TC001_AccountRegistrationTest">
+                <methods>
+                    <include name="verify_Account_Registration"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
